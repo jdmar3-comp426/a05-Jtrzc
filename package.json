@@ -1,0 +1,32 @@
+{
+  "name": "a05-jtrzc",
+  "version": "1.0.0",
+  "description": "a05",
+  "main": "database.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "client": "npx browser-sync start -sw",
+    "server": "node server.js",
+    "start": "concurrently --kill-others 'npm run client' 'npm run server'",
+  },
+  "proxy": "http://localhost:8080",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdmar3-comp426/a05-Jtrzc.git"
+  },
+  "author": "jtrzc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdmar3-comp426/a05-Jtrzc/issues"
+  },
+  "homepage": "https://github.com/jdmar3-comp426/a05-Jtrzc#readme",
+  "dependencies": {
+    "better-sqlite3": "^7.4.5",
+    "browser-sync": "^2.27.7",
+    "concurrently": "^6.4.0",
+    "express": "^4.17.1",
+    "md5": "^2.3.0"
+  }
+  
+}

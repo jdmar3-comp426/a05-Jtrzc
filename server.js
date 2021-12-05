@@ -59,17 +59,12 @@ app.use(function(req, res){
     res.status(404);
 });
 
-    © 2021 GitHub, Inc.
+app.post('/create_account', function (req, res){
+	let username = req.body.username
+	let email = req.body.email
+	let password = md5(req.body.password)
+	
+	const stmt = db.prepare("INSERT INTO userinfo (user, email, pass) VALUES (?, ?, ?)");
+	const info = stmt.run(username, email, password);
 
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
+});
